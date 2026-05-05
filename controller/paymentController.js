@@ -4,7 +4,6 @@ const { v4: uuidv4 } = require('uuid');
 const Booking = require("../models/BookingSchema");
 const Doctor = require("../models/DoctorSchema");
 const User = require("../models/UserSchema");
-const stripe = require("stripe")("sk_test_51ODQzkSE1wNzm1KdnByaieqzJBTs0knlCmANiqspGUuUvzNv81ECbBjM46sP7iLqXRVRozAhzTme83QG58MoaG7c00D7V5LKre")
 
 // ================= Book Appointment
 
