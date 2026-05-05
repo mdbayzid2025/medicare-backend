@@ -20,5 +20,4 @@ doctorRouter.put("/:id", updateDoctor)
 doctorRouter.delete("/:id", authenticate, restrict(["doctor"]), deleteDoctor)
 
 doctorRouter.get('/profile/:id', authenticate,  restrict(["doctor"]), doctorProfile)
-// doctorRouter.get('/profile/:id', authenticate, restrict(["doctor"]), doctorProfile)
 module.exports = doctorRouter;

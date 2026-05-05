@@ -49,18 +49,27 @@ exports.register = async (req, res) => {
               }            
         }
         if(role === "doctor"){
-          const newDoctor = await Doctor.create({
-                name,
-                email,
+          const newDoctor = await Doctor.create({               
                 password: hashPassword,
-                photo,
-                gender,
-                role
+                ...req.body
             })
             if(newDoctor){
                 user = newDoctor;   
              }
         }
+        // if(role === "doctor"){
+        //   const newDoctor = await Doctor.create({
+        //         name,
+        //         email,
+        //         password: hashPassword,
+        //         photo,
+        //         gender,
+        //         role
+        //     })
+        //     if(newDoctor){
+        //         user = newDoctor;   
+        //      }
+        // }
         return res.status(200).json({success:true, message: "User created successfully", user})
 
     } catch (error) {

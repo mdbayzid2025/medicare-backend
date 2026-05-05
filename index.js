@@ -17,7 +17,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const corsOptions = {
-  origin: "*",
+  origin: ["*"],
   credentials: true,
   optionSuccessStatus: 200
 };
@@ -66,3 +66,23 @@ app.listen(port, () => {
 });
 
 
+/*
+
+# Environment Variables for Medicare Server
+
+# Database Configuration
+# MONGO_URL=mongodb+srv://medicare:k8OPP6YNT8CzZsG0@cluster0.al92jf4.mongodb.net/?retryWrites=true&w=majority
+MONGO_URL=mongodb+srv://ssmdbayzid_db_user:GnzrLUIhlqPLcLqL@cluster0.ff7leth.mongodb.net/?appName=Cluster0
+
+# Server Configuration
+PORT=5000
+
+# JWT Tokens
+ACCESS_TOKEN=n7yfRMo/ujHfBWSF2VFdevG4WRbBoG9Fqwu51+/9ZBUV6Qo88YG7IbcEaIer+g+OgjMv4RyNQ6/67a
+REFRESH_TOKEN=F5xWmkOR3oA6J6bdAJ1pbstTuhIfItF1PQfP26YXk1QlaoKy/YJxPUngyK4kNG9O04aret4D+2qIq9
+
+# Stripe Payment Configuration
+STRIPE_SECRET_KEY=sk_test_51SC4ezGVfM2ntjp9sd6svTVXYbKlgjEIL0KTnj60isUwbn1oGkHGp2qIm9byjbCMAu43gWEQV3plsHGP1mY0kwRS00gdHFDl6s
+STRIPE_WEBHOOK_SECRET=whsec_zv12BQB2Of0lZQnVCwwwR95AfH3F4DrC
+
+*/
