@@ -17,7 +17,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const corsOptions = {
-  origin: ["*"],
+  origin: ["http://localhost:3000", "http://localhost:5173", "https://medicain-website.vercel.app"],
   credentials: true,
   optionSuccessStatus: 200
 };
